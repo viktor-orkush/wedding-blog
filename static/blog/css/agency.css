@@ -125,7 +125,7 @@ img::-moz-selection {
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: var(--my-color-blue);
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -183,23 +183,22 @@ img::-moz-selection {
 
 header.masthead {
     /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        var(--my-color-white) 0%,*/
-    /*        var(--my-color-white) 50%,*/
-    /*        var(--my-color-white) 50%,*/
-    /*        var(--my-color-white) 100%*/
-    /*        !*url("../img/header-img.jpg");*!*/
+            /*to right,*/
+            /*var(--my-color-white) 0%,*/
+            /*var(--my-color-white) 50%,*/
+            /*var(--my-color-white) 50%,*/
+            /*var(--my-color-white) 100%*/
+            /*url("../../media/img/header-img/IMG_4391_gmg58r_c_scale,w_1380.jpg");*/
     /*);*/
     text-align: center;
     color: white;
-    background-color: #363640;
-
-
-    /*background-image: url("../img/header-img.jpg");*/
+    /*background-color: #363640;*/
+    background-image: url("../../media/img/header-img/IMG_4391_gmg58r_c_scale,w_1380.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center center;
-    /*background-size: 500px;*/
+    background-position: top center;
+    background-size: cover;
+    height: 100vh;
 }
 
 header.masthead .photo-text .intro-lead-in {

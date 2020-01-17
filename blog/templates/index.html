@@ -8,28 +8,9 @@
     <!-- Header -->
     <header class="masthead">
         <div class="container">
-            <!--        <div class="row">-->
-            <!--            <div class="col-md-6">-->
-            <!--                <img src="img/header-img-left.jpg" alt="test" class="img-responsive">-->
-            <!--            </div>-->
-            <!--            <div class="col-md-6">-->
-            <!--                <img src="img/header-img-right.jpg" alt="test" class="img-responsive">-->
-            <!--            </div>-->
-            <!--        </div>-->
-
-            <div class="row">
-                <div class="col-12">
-                    <picture>
-                        <source srcset="{% static 'media/img/header-img/header-img_chv4x3_c_scale_w_1200.jpg' %}"
-                                media="(min-width: 600px)"/>
-                        <img class="img-responsive" src="{% static 'media/img/header-img/IMG_6180_1570950983_kx9doj_c_scale_w_456.jpg' %}"/>
-                    </picture>
-                </div>
-            </div>
             <div class="photo-text">
                 <h1 class="intro-heading text-uppercase">Ведущая</h1>
                 <div class="intro-lead-in">Анастасия Кись</div>
-                <!--                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">О себе</a>-->
             </div>
         </div>
     </header>
@@ -37,36 +18,36 @@
     <!-- Services -->
     <section class="page-section" id="about">
         <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading text-uppercase">Обо мне</h2>
-                        <h3 class="section-subheading text-muted">Я веду мероприятия</h3>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Обо мне</h2>
+                    <h3 class="section-subheading text-muted">Я веду мероприятия</h3>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="about-us-content mb-80">
+                        <h3 class="wow fadeInUp" ё>Кись Анастасия</h3>
+                        <div class="line wow fadeInUp" data-wow-delay="200ms"
+                             style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;"></div>
+                        <p>Давайте знакомиться! Меня зовут Ника Константинова! Я профессиональная ведущая.
+                            Веду все виды мероприятий. 300 событий, среди них светские и корпоративные мероприятия,
+                            тимбилдинги, свадьбы и выездные церемонии, а также работа в дуэте.
+                            И все это за 6 лет. Я вела мероприятия для 12 человек и для 3000.
+                        </p>
+                        <p>
+                            В мае 2017 года я провела свой первый международный прямой эфир на весь мир
+                            «Allocation Draw» для Евровидения 2017, а потом за 2 недели этого события я
+                            провела более 100 пресс конференций со всеми участниками конкурса.
+                        </p>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="about-us-content mb-80">
-                            <h3 class="wow fadeInUp" ё>Кись Анастасия</h3>
-                            <div class="line wow fadeInUp" data-wow-delay="200ms"
-                                 style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;"></div>
-                            <p>Давайте знакомиться! Меня зовут Ника Константинова! Я профессиональная ведущая.
-                                Веду все виды мероприятий. 300 событий, среди них светские и корпоративные мероприятия,
-                                тимбилдинги, свадьбы и выездные церемонии, а также работа в дуэте.
-                                И все это за 6 лет. Я вела мероприятия для 12 человек и для 3000.
-                            </p>
-                            <p>
-                                В мае 2017 года я провела свой первый международный прямой эфир на весь мир
-                                «Allocation Draw» для Евровидения 2017, а потом за 2 недели этого события я
-                                провела более 100 пресс конференций со всеми участниками конкурса.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="embed-responsive embed-responsive-21by9">
-                            <iframe class="embed-responsive-item" src="{% static 'media/video/preview.mp4' %}"></iframe>
-                        </div>
+                <div class="col-12 col-lg-6">
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <iframe class="embed-responsive-item" src="{% static 'media/video/preview.mp4' %}"></iframe>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -128,21 +109,22 @@
             <div class="popup-gallery gallery" id="gallery">
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 1">
-                    <a href="{% static 'media/img/portfolio/gallery_1_g0faf5_c_scale,w_960.jpg' %}" rel="alternate">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_1_g0faf5_c_scale,w_960.jpg' %}" rel="alternate">
                         <img class="img-fluid" sizes="(max-width: 960px) 100vw, 960px"
                              srcset="{% static 'media/img/portfolio/gallery_1_g0faf5_c_scale_w_400.jpg' %} 400w,
                                 {% static 'media/img/portfolio/gallery_1_g0faf5_c_scale,w_641.jpg' %} 641w,
                                 {% static 'media/img/portfolio/gallery_1_g0faf5_c_scale,w_960.jpg' %} 960w"
                              src="{% static 'media/img/portfolio/gallery_1_g0faf5_c_scale_w_400.jpg' %}"
                              alt=""/></a>
-                    <!--              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg' %}" alt="Card image cap">-->
                 </div>
                 <!-- Grid column -->
 
 
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 2">
-                    <a href="{% static 'media/img/portfolio/gallery_5_e2j9mx_c_scale,w_640.jpg' %}" rel="alternate">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_5_e2j9mx_c_scale,w_640.jpg' %}" rel="alternate">
                         <img class="img-fluid"
                              sizes="(max-width: 640px) 100vw, 640px"
                              srcset="{% static 'media/img/portfolio/gallery_5_e2j9mx_c_scale,w_400.jpg' %} 400w,
@@ -157,7 +139,8 @@
 
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 2">
-                    <a href="{% static 'media/img/portfolio/gallery_4_o9egxb_c_scale,w_400.png' %}" rel="">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_4_o9egxb_c_scale,w_889.png' %}" rel="">
                         <img class="img-fluid" sizes="(max-width: 1200px) 100vw, 1200px"
                              srcset="{% static 'media/img/portfolio/gallery_4_o9egxb_c_scale,w_400.png' %} 400w,
                                 {% static 'media/img/portfolio/gallery_4_o9egxb_c_scale,w_889.png' %} 889w,
@@ -171,7 +154,8 @@
 
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 2">
-                    <a href="{% static 'media/img/portfolio/gallery_3_afyaab_c_scale,w_862.jpg' %}" rel="alternate">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_3_afyaab_c_scale,w_862.jpg' %}" rel="alternate">
                         <img class="img-fluid"
                              sizes="(max-width: 1200px) 100vw, 1200px"
                              srcset="{% static 'media/img/portfolio/gallery_3_afyaab_c_scale,w_400.jpg' %} 400w,
@@ -185,7 +169,9 @@
 
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 2">
-                    <a href="{% static 'media/img/portfolio/gallery_2_b4vxh1_ar_16_9,c_fill,g_auto__c_scale,w_1200.png' %}" rel="alternate">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_2_b4vxh1_ar_16_9,c_fill,g_auto__c_scale,w_1200.png' %}"
+                       rel="alternate">
                         <img class="img-fluid" sizes="(max-width: 2000px) 60vw, 1200px"
                              srcset="{% static 'media/img/portfolio/gallery_2_b4vxh1_ar_16_9,c_fill,g_auto__c_scale,w_400.png' %},
                                 {% static 'media/img/portfolio/gallery_2_b4vxh1_ar_16_9,c_fill,g_auto__c_scale,w_933.png' %} 933w,
@@ -198,7 +184,8 @@
 
                 <!-- Grid column -->
                 <div class="mb-3 pics animation all 1">
-                    <a href="{% static 'media/img/portfolio/gallery_6_k5dakh_c_scale,w_676.jpg' %}" rel="alternate">
+                    <a data-fslightbox="gallery" data-type="image"
+                       href="{% static 'media/img/portfolio/gallery_6_k5dakh_c_scale,w_676.jpg' %}" rel="alternate">
                         <img class="img-fluid" sizes="(max-width: 676px) 100vw, 676px"
                              srcset="{% static 'media/img/portfolio/gallery_6_k5dakh_c_scale,w_400.jpg' %} 400w,
                                 {% static 'media/img/portfolio/gallery_6_k5dakh_c_scale,w_555.jpg' %} 555w,
@@ -208,11 +195,8 @@
                     <!--              <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg' %}" alt="Card image cap">-->
                 </div>
                 <!-- Grid column -->
-
-
             </div>
             <!-- Grid row -->
-
         </div>
     </section>
 
