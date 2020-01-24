@@ -607,6 +607,9 @@ h1 {
     height: 225px;
     border: 7px solid rgba(0, 0, 0, 0.1);
 }
+.team-member img:hover{
+    border: 8px solid var(--my-color-blue);
+}
 
 .team-member h4 {
     margin-top: 25px;
