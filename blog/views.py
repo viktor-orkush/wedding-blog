@@ -2,12 +2,14 @@ from django.core.paginator import Paginator
 from django.shortcuts import render
 
 from blog.models import Post
+from contact.forms import ContactForm
 
 NUM_OF_POSTS = 5
 
 
 def index(request):
-    return render(request, 'index.html')
+    contact_form = ContactForm()
+    return render(request, 'index.html', {'contact_form': contact_form})
 
 
 def all_post(request):
@@ -25,3 +27,4 @@ def post(request, slug):
     except Exception as e:
         raise e
     return render(request, 'post.html', {'post': post})
+

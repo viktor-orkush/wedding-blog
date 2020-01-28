@@ -26,6 +26,7 @@
 {#    <link href="{% static 'blog/css/magnific-popup.css' %}" rel="stylesheet">#}
     <link href="{% static 'blog/css/owl.carousel.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'blog/css/owl.theme.default.min.css' %}">
+{#    <link href="{% static 'blog/css/contact.form.css' %}" rel="stylesheet">#}
     <link href="{% static 'blog/css/agency.css' %}" rel="stylesheet">
     <link rel="shortcut icon" href="#" />
 </head>
@@ -37,6 +38,13 @@
 {% block content %}{% endblock %}
 
  {% include 'footer.html' %}
+
+ {% include 'contact_form.html' %}
+
+<div class="email-bt">
+    <button class="btn" data-toggle="modal"  data-target="#contact_form_id"><i class="fa fa-envelope"></i></button>
+</div>
+
 </body>
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'blog/js/jquery/jquery.min.js' %}"></script>
@@ -53,5 +61,6 @@
 <script src="{% static 'blog/js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'blog/js/fslightbox.js' %}"></script>
 
+<script src="{% static 'blog/js/contact.form.js' %}"></script>
 <script src="{% static 'blog/js/agency.js' %}"></script>
 </html>
