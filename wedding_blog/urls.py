@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from blog import views
+from wedding_blog import settings
+from django.contrib.staticfiles.urls import static
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -24,3 +26,6 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

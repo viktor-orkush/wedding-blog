@@ -1,8 +1,7 @@
-from autoslug import AutoSlugField
+from django_extensions.db.fields import AutoSlugField
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
-from django.utils.text import slugify
 
 
 class Post(models.Model):
@@ -11,9 +10,12 @@ class Post(models.Model):
     description = models.CharField(max_length=250, blank=False)
     keywords = models.CharField(max_length=250, blank=False)
     body = models.TextField()
-    slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
+    slug = AutoSlugField(populate_from='title')
     image = models.FileField(upload_to='posts', blank=False)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
+
+    def slugify_function(self, content):
+        return content.replace(' ', '-').lower()
 
     def get_absolute_url(self):
         return reverse('blog:post', args={self.slug})
