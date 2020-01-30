@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e=(yni$@wm+d%sw9(ek1047@eba_@mn0^-c4qqz#7!1s95d2s0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kissvedet.com.ua', 'www.kissvedet.com.ua', '195.123.208.134', '0.0.0.0', '127.0.0.1']
 

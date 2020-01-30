@@ -8,6 +8,8 @@ $('.owl-carousel').owlCarousel({
     items: 1,
     loop: true,
     center: true,
+    // mouseDrag: true,
+    // touchDrag: false,
 })
 
 /*END Owl Carousel 2*/

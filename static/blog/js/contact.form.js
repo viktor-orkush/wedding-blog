@@ -20,7 +20,8 @@ $("#submitForm").on('click', function () {
             }
         },
         error : function(xhr,errmsg,err) {
-            console.log('error');
+            console.log('error dont send');
+            // console.log(err);
             // $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
             //     " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
             // console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
@@ -43,3 +44,4 @@ function show_alert(message) {
     //     $("#contact_form_alert").alert('close');
     // }, 6000);
 }
+
