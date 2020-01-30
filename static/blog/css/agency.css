@@ -112,12 +112,13 @@ img::-moz-selection {
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
     background-color: var(--my-color-blue) !important;
     border-color: var(--my-color-white) !important;
+    box-shadow: 0 0 0 0.2rem rgba(238, 237, 232, 1) !important;
     color: white;
 }
 
-.btn-primary:active, .btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(238, 237, 232, 1) !important;
-}
+/*.btn-primary:active, .btn-primary:focus {*/
+    /*box-shadow: 0 0 0 0.2rem rgba(238, 237, 232, 1) !important;*/
+/*}*/
 
 #mainNav {
     background-color: #212529;
@@ -1002,9 +1003,4 @@ img.img-responsive {
 .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
     -ms-touch-action: auto;
         touch-action: auto;
-}
-
-input.required::after {
-    content: "*";
-    border-color: red;
 }

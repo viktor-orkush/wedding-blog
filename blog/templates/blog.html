@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}Блог Анастасии Кись интересные новости и тренды про свадьбы, церемонии, корпоративы {% endblock %}
+{% block description %}блог, корпаративы, выезндные церемонии{% endblock %}
+{% block keywords %}блог, корпоративы, выездные церемонии{% endblock %}
 {% block content %}
 
     {#    <header class="masthead setnav"></header>#}
@@ -11,14 +14,14 @@
                 <h3 class="section-subheading text-muted">В блоге я пишу свои мысли, делюсь полезными советами</h3>
             </div>
         </div>
-        {% for post in posts %}
+         {% for post in posts %}
             <!-- Grid row -->
             <div class="row align-items-center mt-5">
                 <!-- Grid column -->
                 <div class="col-lg-5 col-xl-4 ">
                     <!-- Featured image -->
                     <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                        <img class="img-fluid" src="{% static 'media/' %}{{ post.image }}" alt="Sample image">
+                        <img class="img-fluid" src="{{ post.image.url }}" alt="Sample image">
                         <a>
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -33,7 +36,7 @@
                     <!-- Post data -->
                     <p>Автор: <a class="font-weight-bold">Кись Анастасия</a>, {{ post.pub_date }}</p>
                     <!-- Read more button -->
-                    <a class="btn btn-blue btn-md mx-0 btn-rounded"
+                    <a class="btn btn-primary"
                        href="{{ post.get_absolute_url }}">Подробней</a>
                 </div>
                 <!-- Grid column -->

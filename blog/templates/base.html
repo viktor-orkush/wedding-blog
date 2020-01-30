@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="{% static 'media/img/favicon.ico' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ведущая Анастасия Кись. Узнать подробности о Ведущей и забронировать его на мероприятие можно на сайте!">
-    <meta name="keywords" content="Ведущая Анастасия Кись, ведущиая, лучшая ведущая, ведущая мероприятий, ведущая корпоративов, ведущая свадеб">
-    <meta name="author" content="">
 
-    <title>Ведущая Анастасия Кись</title>
+    <meta name="description" content="{% block description %}Ведущая Анастасия Кись. Узнать подробности о Ведущей и забронировать его на мероприятие можно на сайте!{% endblock description %}">
+    <meta name="keywords" content="{% block keywords %}Ведущая Анастасия Кись, ведущиая, лучшая ведущая, ведущая мероприятий, ведущая корпоративов, ведущая свадеб{% endblock keywords %}">
+    <meta name="author" content="Ведущая Анастасия Кись">
+    <title>{% block title %}Ведущая Анастасия Кись{% endblock title %}</title>
 
     <link href="{% static 'blog/css/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'blog/css/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">

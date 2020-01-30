@@ -13,18 +13,20 @@ def index(request):
 
 
 def all_post(request):
+    contact_form = ContactForm()
     post_list = Post.objects.all()
     post_list = post_list.order_by('-pub_date')
     paginator = Paginator(post_list, NUM_OF_POSTS)  # Show NUM_OF_PAGES posts per page
     page = request.GET.get('page')
     posts = paginator.get_page(page)
-    return render(request, 'blog.html', {'posts': post_list})
+    return render(request, 'blog.html', {'posts': post_list, 'contact_form': contact_form})
 
 
 def post(request, slug):
+    contact_form = ContactForm()
     try:
         post = Post.objects.get(slug=slug)
     except Exception as e:
         raise e
-    return render(request, 'post.html', {'post': post})
+    return render(request, 'post.html', {'post': post, 'contact_form': contact_form})
 
