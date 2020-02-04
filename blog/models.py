@@ -2,6 +2,7 @@ from django_extensions.db.fields import AutoSlugField
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
+from froala_editor.fields import FroalaField
 
 
 class Post(models.Model):
@@ -9,7 +10,7 @@ class Post(models.Model):
     title = models.CharField(max_length=80)
     description = models.CharField(max_length=250, blank=False)
     keywords = models.CharField(max_length=250, blank=False)
-    body = models.TextField()
+    body = FroalaField()
     slug = AutoSlugField(populate_from='title')
     image = models.FileField(upload_to='posts', blank=False)
     pub_date = models.DateTimeField('date published', auto_now_add=True)

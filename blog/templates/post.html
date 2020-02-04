@@ -37,7 +37,9 @@
                     <!-- Card -->
                     <!-- Excerpt -->
                     <div class="mt-5">
-                        <p>{{ post.body }}</p>
+                        {% autoescape off %}
+                            {{ post.body }}
+                        {% endautoescape %}
                     </div>
                 </div>
                 <!-- Grid column -->

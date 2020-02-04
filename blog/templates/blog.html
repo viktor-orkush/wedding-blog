@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Блог Анастасии Кись интересные новости и тренды про свадьбы, церемонии, корпоративы {% endblock %}
+{% block title %}Блог Анастасии Кись в котором я расскажу об основных моментах, лучших практиках, поделюсь последними трендами проведения свадеб, выездных церемоний, кооперативах  {% endblock %}
 {% block description %}блог, корпаративы, выезндные церемонии{% endblock %}
 {% block keywords %}блог, корпоративы, выездные церемонии{% endblock %}
 {% block content %}
@@ -36,7 +36,7 @@
                     <!-- Post data -->
                     <p>Автор: <a class="font-weight-bold">Кись Анастасия</a>, {{ post.pub_date }}</p>
                     <!-- Read more button -->
-                    <a class="btn btn-primary"
+                    <a class="float-right btn btn-primary"
                        href="{{ post.get_absolute_url }}">Подробней</a>
                 </div>
                 <!-- Grid column -->
