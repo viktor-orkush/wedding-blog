@@ -5,7 +5,6 @@
 {% block keywords %}{{ post.keywords }}{% endblock %}
 
 {% block content %}
-{#    <header class="masthead setnav"></header>#}
     <div class="container mt-5">
         <!--Section: Content-->
         <section class="mx-md-5 dark-grey-text">
@@ -15,7 +14,6 @@
                 <div class="col-md-12">
                     <!-- Card -->
                     <div class="card card-cascade wider reverse">
-
                         <!-- Card image -->
                         <div class="view view-cascade overlay">
                             <img class="card-img-top" src="{{ post.image.url }}"
@@ -26,10 +24,7 @@
                         </div>
                         <!-- Card content -->
                         <div class="card-body card-body-cascade text-center">
-
-                            <!-- Title -->
                             <h3 class="font-weight-bold"><a>{{ post.title }}</a></h3>
-                            <!-- Data -->
                             <p>Автор: <a><strong>Анастасия Кись</strong></a>, {{ post.pub_date }}</p>
                         </div>
                         <!-- Card content -->

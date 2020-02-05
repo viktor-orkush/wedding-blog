@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'froala_editor',
     'blog',
     'contact',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

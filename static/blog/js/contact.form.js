@@ -1,11 +1,5 @@
-//
-// $("#contact_form_id").on('click', function () {
-//     $('#contact_form_alert').show();
-// });
-
 $("#submitForm").on('click', function () {
     $.ajax({
-        // url: '{%url "contact_form" %}',
         url: '/contact/',
         type: "POST",
         data: $('#contact_form').serialize(),
@@ -19,17 +13,12 @@ $("#submitForm").on('click', function () {
                 console.log('error');
             }
         },
-        error : function(xhr,errmsg,err) {
-            console.log('error dont send');
-            // console.log(err);
-            // $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
-            //     " <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
-            // console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        error : function(err) {
+            console.log('error result ' + err);
+            show_alert("Вы уже сделали запрос!");
         }
     });
 });
-
-
 
 function show_alert(message) {
     $('#contact_form_alert').html('<div class="alert alert-success">' +
@@ -40,8 +29,5 @@ function show_alert(message) {
       function(){
         $(this).remove();
       });
-    // setTimeout(function () {
-    //     $("#contact_form_alert").alert('close');
-    // }, 6000);
 }
 

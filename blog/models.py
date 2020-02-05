@@ -21,19 +21,5 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('blog:post', args={self.slug})
 
-    # def _get_unique_slug(self):
-    #     slug = slugify(self.title)
-    #     unique_slug = slug
-    #     num = 1
-    #     while Post.objects.filter(slug=unique_slug).exists():
-    #         unique_slug = '{}-{}'.format(slug, num)
-    #         num += 1
-    #     return unique_slug
-    #
-    # def save(self, *args, **kwargs):
-    #     if not self.slug:
-    #         self.slug = self._get_unique_slug()
-    #     super().save(*args, **kwargs)
-
     def __str__(self):
         return '"{title}" '.format(title=self.title)
